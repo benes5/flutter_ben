@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'home.dart';
 
 class GroupPage extends StatelessWidget {
   GroupPage(this.username, {Key? key}) : super(key: key);
@@ -12,11 +13,26 @@ class GroupPage extends StatelessWidget {
       ),
       backgroundColor: Colors.white,
       body: Center(
-        child: Text(
-          username.toString(),
-          style: const TextStyle(
-            fontSize: 20
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              username.toString(),
+              style: const TextStyle(
+                fontSize: 20
+                ),
             ),
+            ElevatedButton(
+              onPressed: (){
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const HomePage()),
+                );
+              }, 
+              child: const Text('はじめる')
+              )
+          ],
         ),
       ),
     );

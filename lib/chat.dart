@@ -68,6 +68,7 @@ class ChatRoomState extends State<ChatRoom> {
           showUserNames: true,
         ),
         bottomNavigationBar: Container(
+          color: Colors.grey.shade900,
           padding: const EdgeInsets.only(left: 20, right:20),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,

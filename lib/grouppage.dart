@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'home.dart';
+import 'login.dart';
 
 class GroupPage extends StatelessWidget {
-  GroupPage(this.username, {Key? key}) : super(key: key);
-  String username;
+  const GroupPage( {Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

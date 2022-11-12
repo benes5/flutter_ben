@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'grouppage.dart';
 
+String username = '';
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
 
@@ -9,7 +10,6 @@ class LoginScreen extends StatefulWidget {
 }
 
 class LoginScreenState extends State<LoginScreen> {
-  String username = '';
 
   @override
   Widget build(BuildContext context) {
@@ -43,7 +43,7 @@ class LoginScreenState extends State<LoginScreen> {
                     Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => GroupPage(username)),
+                      builder: (context) => const GroupPage()),
                     );
                   },
                   child: const Text('登録'),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'grouppage.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -12,42 +13,43 @@ class LoginScreenState extends State<LoginScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('ユーザーネームの入力'),
-      ),
-      body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 24),
-        child: Center(
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              const Text(
-                'ユーザネーム登録',
-                style: TextStyle(
-                  fontSize: 32,
-                  fontWeight: FontWeight.bold,
+    return GestureDetector(
+      onTap:() => primaryFocus?.unfocus(),
+      child: Scaffold(
+        appBar: AppBar(
+          title: const Text('ユーザーネームの入力'),
+        ),
+        body: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 24),
+          child: Center(
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                TextFormField(
+                  decoration: const InputDecoration(
+                    prefixIcon: Icon(Icons.people),
+                    hintText: 'こたっつ',
+                    labelText: 'ユーザーネーム',
+                  ),
+                  onChanged: (String value) {
+                    setState(() {
+                      username = value;
+                    });
+                  },
                 ),
-              ),
-              TextFormField(
-                decoration: const InputDecoration(
-                  icon: Icon(Icons.people),
-                  hintText: 'こたっつ',
-                  labelText: 'ユーザーネーム',
-                ),
-                onChanged: (String value) {
-                  setState(() {
-                    username = value;
-                  });
-                },
-              ),
-              const SizedBox(height: 15),
-              ElevatedButton(
-                onPressed: () {
-                },
-                child: const Text('登録'),
-              )
-            ],
+                const SizedBox(height: 15),
+                ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => GroupPage(username)),
+                    );
+                  },
+                  child: const Text('登録'),
+                )
+              ],
+            ),
           ),
         ),
       ),

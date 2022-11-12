@@ -13,7 +13,7 @@ enum TabItem {
   chat(
     title: 'chat',
     icon: Icons.chat,
-    page: ChatPage(),
+    page: ChatRoom(),
   ),
 
   ranking(

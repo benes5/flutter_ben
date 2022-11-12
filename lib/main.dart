@@ -10,6 +10,7 @@
 //デバッグしたときにエラーが出てしまうので注意）
 import 'package:flutter/material.dart';
 import 'bottomtab.dart';
+import 'login.dart';
 
 void main() {
   runApp(const MyApp());
@@ -32,7 +33,7 @@ class MyApp extends StatelessWidget {
           foregroundColor: Colors.white,
         ),
       ),
-      home: const BottomTabPage(),
+      home: const LoginScreen(),
       
 
     );

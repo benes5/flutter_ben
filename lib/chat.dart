@@ -28,7 +28,7 @@ class ChatRoomState extends State<ChatRoom> {
       //firstName: "テスト",
       lastName: "たろう",
       imageUrl:
-          "https://pbs.twimg.com/profile_images/1335856760972689408/Zeyo7jdq_bigger.jpg");
+          "http://illustrain.com/img/work/2016/illustrain02-kotatsu01.png");
 
   final _other2 = const types.User(
       id: 'other2user',
@@ -97,8 +97,14 @@ class ChatRoomState extends State<ChatRoom> {
                 onPressed: (){
                   _button3Pressed();
                 },
-                child: const Text('私も頑張ります。')
+                child: const Text('私も頑張る。')
               ),
+              // InkWell(
+              //   onTap: (){},
+              //   child: const Icon(
+              //     Icons.keyboard
+              //     )
+              //   )
             ],
           ),
         ),
@@ -148,7 +154,7 @@ class ChatRoomState extends State<ChatRoom> {
       author: _user,
       createdAt: DateTime.now().millisecondsSinceEpoch,
       id: randomString(),
-      text: '私も頑張ります。',
+      text: '私も頑張る。',
     );
 
     _addMessage(textMessage);

@@ -23,22 +23,35 @@ class ChatRoomState extends State<ChatRoom> {
 
 
   // 追加
-  final _other = const types.User(
-      id: 'otheruser',
+  final _other1 = const types.User(
+      id: 'other1user',
       //firstName: "テスト",
       lastName: "たろう",
       imageUrl:
           "https://pbs.twimg.com/profile_images/1335856760972689408/Zeyo7jdq_bigger.jpg");
+
+  final _other2 = const types.User(
+      id: 'other2user',
+      //firstName: "テスト",
+      lastName: "こうへい",
+      imageUrl:
+          "https://1.bp.blogspot.com/-2icHJ4zioLs/YHDkG_fwSII/AAAAAAABdkg/x6TzbjTM8U874CDTB1JpMKid3XU_kN94wCNcBGAsYHQ/s400/cat_kotatsu_neko.png");
 
   // 追加
   @override
   void initState() {
     super.initState();
     _addMessage(types.TextMessage(
-      author: _other,
+      author: _other1,
       createdAt: DateTime.now().millisecondsSinceEpoch,
       id: randomString(),
       text: "たろうさんは目標を達成しました",
+    ));
+    _addMessage(types.TextMessage(
+      author: _other2,
+      createdAt: DateTime.now().millisecondsSinceEpoch,
+      id: randomString(),
+      text: "すごい！！",
     ));
   }
   @override

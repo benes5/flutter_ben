@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 const double hour = 60 * 60;
 const double minute = 60;
-List<double> ranklist = [1*hour+10*minute, 0*hour+30*minute+35, 20*minute+45,15*minute+55];
+List<double> ranklist = [0*hour+50*minute+30, 0*hour+30*minute+35, 10*minute+45,15*minute+55];
 
 class MyRankingApp extends StatelessWidget {
   const MyRankingApp({Key? key}) : super(key: key);
@@ -54,9 +54,10 @@ class MyTableWidget extends StatelessWidget {
     int min = (time / 60).toInt();
     time -= min*60;
     int sec = (time).toInt();
-    print("h:${h}");
-    print("min:${min}");
-    print("sec:${sec}");
+    //for_test
+    // print("h:${h}");
+    // print("min:${min}");
+    // print("sec:${sec}");
     if(h == 0){
       return Text("${index+1}：${min}分${sec}秒");
     }else{

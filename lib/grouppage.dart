@@ -38,7 +38,7 @@ class GroupPage extends StatelessWidget {
                 children: [
                   ClipOval(
                     child: Image.asset(
-                    'assets/images/cat_kotatsu.png',
+                    'assets/images/neko.png',
                     width: 60,
                     height: 60,
                     fit: BoxFit.fill,
@@ -49,7 +49,7 @@ class GroupPage extends StatelessWidget {
                   ),
                   ClipOval(
                     child: Image.asset(
-                    'assets/images/saru_kotatsu.png',
+                    'assets/images/saru.png',
                     width: 60,
                     height: 60,
                     fit: BoxFit.fill,
@@ -60,7 +60,7 @@ class GroupPage extends StatelessWidget {
                   ),
                   ClipOval(
                     child: Image.asset(
-                    'assets/images/usagi_kotatsu.png',
+                    'assets/images/usagi.png',
                     width: 60,
                     height: 60,
                     fit: BoxFit.fill,
@@ -87,7 +87,7 @@ class GroupPage extends StatelessWidget {
                     height: 60,
                     fit: BoxFit.fill,
                     ),
-                  ),                                      
+                  ),
                 ],
                 )
               ),

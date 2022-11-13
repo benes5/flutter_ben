@@ -10,22 +10,22 @@ class MyRankingApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     //sort
-    ranklist.sort((a, b) => b.compareTo(-a));
+    //ranklist.sort((a, b) => b.compareTo(-a));
     //sort of Mr.Takamasa's code
-    // ranklist.sort((a, b){
-    //   if(a != b && (a~/(60*60)) != (b~/(60*60))){//時間を比較
-    //     return (a~/(60*60)).compareTo((b~/(60*60)));
-    //
-    //   }else if(a != b && (a~/(60*60)) == (b~/(60*60)) && (a~/60) != (b~/60)){//分を比較
-    //     return (a~/60).compareTo((b~/60));
-    //
-    //   }else if(a != b && (a~/(60*60)) == (b~/(60*60)) && (a~/60) == (b~/60)){//秒を比較
-    //     return (a).compareTo(b);
-    //   }else{
-    //     return a.toString().length.compareTo(b.toString().length);//何か値を返す必要があるため文字列の長さを比較
-    //   }
-    // }
-    // );
+    ranklist.sort((a, b){
+      if(a != b && (a~/(60*60)) != (b~/(60*60))){//時間を比較
+        return (a~/(60*60)).compareTo((b~/(60*60)));
+
+      }else if(a != b && (a~/(60*60)) == (b~/(60*60)) && (a~/60) != (b~/60)){//分を比較
+        return (a~/60).compareTo((b~/60));
+
+      }else if(a != b && (a~/(60*60)) == (b~/(60*60)) && (a~/60) == (b~/60)){//秒を比較
+        return (a).compareTo(b);
+      }else{
+        return a.toString().length.compareTo(b.toString().length);//何か値を返す必要があるため文字列の長さを比較
+      }
+    }
+    );
 
     return MaterialApp(
       title: "ランキング",

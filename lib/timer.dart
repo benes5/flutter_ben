@@ -1,6 +1,11 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
+import 'package:frontend/main.dart';
 import 'package:stop_watch_timer/stop_watch_timer.dart';
+import 'package:network_info_plus/network_info_plus.dart';
+import 'package:connectivity_plus/connectivity_plus.dart';
+
+
 
 class TimerPage extends StatefulWidget {
     const TimerPage({Key? key}) : super(key: key);
@@ -18,10 +23,42 @@ class TimerPage extends StatefulWidget {
   _State createState() => _State();
 }
 
+    void main(stopwatch) async {
+  Timer.periodic(const Duration(seconds: 1), (Timer scan) async {
+    final info = NetworkInfo();
+    var connectivityResult = await (Connectivity().checkConnectivity());
+    if (connectivityResult == ConnectivityResult.mobile) {
+      print('LTEだよ'); // I am connected to a mobile network.
+    } else if (connectivityResult == ConnectivityResult.wifi) {
+      // I am connected to a wifi network.
+      var wifiBSSID = await info.getWifiBSSID(); // 11:22:33:44:55:66
+      //print('SSIDはこれ');
+      //print(wifiBSSID);
+      //var wifiIP = info.getWifiIP(); // 192.168.1.1
+      //var wifiName = info.getWifiName(); // FooNetwork
+      var homewifi = '02:00:00:00:00:00';
+      print('ホームWi－Fiはこっち ${homewifi}');
+      print('SSIDはこっち ${wifiBSSID}');
+      if (homewifi == wifiBSSID) {
+
+        print('家に入ったよ');
+        _State._stopWatchTimer.onStartTimer();
+        scan.cancel();
+        
+      } else {
+        print('まだはいってないよ');
+      }
+      wifiBSSID = '';
+    } else {
+      print('ネットに繋がってないよ');
+    }
+  });
+}
+
 class _State extends State<TimerPage> {
   final _isHours = true;
 
-  final StopWatchTimer _stopWatchTimer = StopWatchTimer(
+static final StopWatchTimer _stopWatchTimer = StopWatchTimer(
     mode: StopWatchMode.countUp,
     onChange: (value) => print('onChange $value'),
     onChangeRawSecond: (value) => print('onChangeRawSecond $value'),
@@ -47,9 +84,11 @@ class _State extends State<TimerPage> {
     _stopWatchTimer.fetchStopped
         .listen((value) => print('stopped from stream'));
     _stopWatchTimer.fetchEnded.listen((value) => print('ended from stream'));
+    main(_stopWatchTimer);
 
     /// Can be set preset time. This case is "00:01.23".
     // _stopWatchTimer.setPresetTime(mSec: 1234);
+    
   }
 
   @override
@@ -60,6 +99,7 @@ class _State extends State<TimerPage> {
 
   @override
   Widget build(BuildContext context) {
+
     return Scaffold(
       appBar: AppBar(
         title: const Text('CountUp Sample'),

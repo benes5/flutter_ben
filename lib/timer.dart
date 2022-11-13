@@ -102,7 +102,7 @@ static final StopWatchTimer _stopWatchTimer = StopWatchTimer(
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('CountUp Sample'),
+        title: const Text('タイマー'),
       ),
       body: Center(
         child: Scrollbar(

@@ -16,12 +16,71 @@ class GroupPage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+
             Text(
-              username.toString(),
+              '$usernameさんのグループは...',
               style: const TextStyle(
                 fontSize: 20
                 ),
             ),
+
+            SizedBox(
+              width: 300,
+              height: 200,
+              child: Row(
+                children: [
+                  ClipOval(
+                    child: Image.asset(
+                    'http://illustrain.com/img/work/2016/illustrain02-kotatsu01.png',
+                    width: 5,
+                    height: 5,
+                    fit: BoxFit.fill,
+                    ),
+                  ),                  
+                ],)
+              ),
+            // ClipOval(
+            //             child: Image.asset(
+            //             'http://illustrain.com/img/work/2016/illustrain02-kotatsu01.png',
+            //             width: 5,
+            //             height: 5,
+            //             fit: BoxFit.fill,
+            //           ),
+            //           ),
+            //         ClipOval(
+            //           child: Image.asset(
+            //           'http://illustrain.com/img/work/2016/illustrain02-kotatsu01.png',
+            //           width: 5,
+            //           height: 5,
+            //           fit: BoxFit.fill,
+            //         ),
+            //         ),
+            //         ClipOval(
+            //           child: Image.asset(
+            //           'http://illustrain.com/img/work/2016/illustrain02-kotatsu01.png',
+            //           width: 5,
+            //           height: 5,
+            //           fit: BoxFit.fill,
+            //         ),
+            //         ),
+            //         ClipOval(
+            //           child: Image.asset(
+            //           'https://vbackground.com/3377/',
+            //           width: 5,
+            //           height: 5,
+            //           fit: BoxFit.fill,
+            //         ),
+            //         ),
+            //         ClipOval(
+            //           child: Image.asset(
+            //           'https://vbackground.com/3377/',
+            //           width: 5,
+            //           height: 5,
+            //           fit: BoxFit.fill,
+            //         ),
+            //         ),                   
+            //       ],
+            //     ),
             ElevatedButton(
               onPressed: (){
                 Navigator.push(

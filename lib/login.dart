@@ -28,7 +28,7 @@ class LoginScreenState extends State<LoginScreen> {
                 TextFormField(
                   decoration: const InputDecoration(
                     prefixIcon: Icon(Icons.people),
-                    hintText: 'こたっつ',
+                    hintText: 'こたつ',
                     labelText: 'ユーザーネーム',
                   ),
                   onChanged: (String value) {

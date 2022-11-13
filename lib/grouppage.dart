@@ -91,48 +91,6 @@ class GroupPage extends StatelessWidget {
                 ],
                 )
               ),
-            // ClipOval(
-            //             child: Image.asset(
-            //             'http://illustrain.com/img/work/2016/illustrain02-kotatsu01.png',
-            //             width: 5,
-            //             height: 5,
-            //             fit: BoxFit.fill,
-            //           ),
-            //           ),
-            //         ClipOval(
-            //           child: Image.asset(
-            //           'http://illustrain.com/img/work/2016/illustrain02-kotatsu01.png',
-            //           width: 5,
-            //           height: 5,
-            //           fit: BoxFit.fill,
-            //         ),
-            //         ),
-            //         ClipOval(
-            //           child: Image.asset(
-            //           'http://illustrain.com/img/work/2016/illustrain02-kotatsu01.png',
-            //           width: 5,
-            //           height: 5,
-            //           fit: BoxFit.fill,
-            //         ),
-            //         ),
-            //         ClipOval(
-            //           child: Image.asset(
-            //           'https://vbackground.com/3377/',
-            //           width: 5,
-            //           height: 5,
-            //           fit: BoxFit.fill,
-            //         ),
-            //         ),
-            //         ClipOval(
-            //           child: Image.asset(
-            //           'https://vbackground.com/3377/',
-            //           width: 5,
-            //           height: 5,
-            //           fit: BoxFit.fill,
-            //         ),
-            //         ),                   
-            //       ],
-            //     ),
             ElevatedButton(
               onPressed: (){
                 Navigator.push(

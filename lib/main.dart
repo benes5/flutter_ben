@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'bottomtab.dart';
 import 'login.dart';
 
 void main() {
@@ -22,7 +23,7 @@ class MyApp extends StatelessWidget {
           foregroundColor: Colors.white,
         ),
       ),
-      home: const LoginScreen(),
+      home: const BottomTabPage(),
       
 
     );

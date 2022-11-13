@@ -24,20 +24,72 @@ class GroupPage extends StatelessWidget {
                 ),
             ),
 
-            SizedBox(
-              width: 300,
-              height: 200,
+            Container(
+              decoration: BoxDecoration(
+                border: Border.all(
+                  width: 3.0,
+                  color: Colors.indigo),
+                borderRadius: BorderRadius.circular(10),
+              ),
+              width: 350,
+              height: 150,
               child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   ClipOval(
                     child: Image.asset(
-                    'http://illustrain.com/img/work/2016/illustrain02-kotatsu01.png',
-                    width: 5,
-                    height: 5,
+                    'assets/images/cat_kotatsu.png',
+                    width: 60,
+                    height: 60,
                     fit: BoxFit.fill,
                     ),
-                  ),                  
-                ],)
+                  ),
+                  const SizedBox(
+                    width:10
+                  ),
+                  ClipOval(
+                    child: Image.asset(
+                    'assets/images/saru_kotatsu.png',
+                    width: 60,
+                    height: 60,
+                    fit: BoxFit.fill,
+                    ),
+                  ), 
+                  const SizedBox(
+                    width:10
+                  ),
+                  ClipOval(
+                    child: Image.asset(
+                    'assets/images/usagi_kotatsu.png',
+                    width: 60,
+                    height: 60,
+                    fit: BoxFit.fill,
+                    ),
+                  ),
+                  const SizedBox(
+                    width:10
+                  ),
+                  ClipOval(
+                    child: Image.asset(
+                    'assets/images/grey.jpg',
+                    width: 60,
+                    height: 60,
+                    fit: BoxFit.fill,
+                    ),
+                  ),
+                  const SizedBox(
+                    width:10
+                  ),
+                  ClipOval(
+                    child: Image.asset(
+                    'assets/images/grey.jpg',
+                    width: 60,
+                    height: 60,
+                    fit: BoxFit.fill,
+                    ),
+                  ),                                      
+                ],
+                )
               ),
             // ClipOval(
             //             child: Image.asset(
@@ -89,7 +141,7 @@ class GroupPage extends StatelessWidget {
                     builder: (context) => const HomePage()),
                 );
               }, 
-              child: const Text('はじめる')
+              child: const Text('グループに参加してはじめる')
               )
           ],
         ),

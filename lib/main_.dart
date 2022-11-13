@@ -29,8 +29,6 @@ void main() async {
         print('まだはいってないよ');
       }
       wifiBSSID = '';
-    } else {
-      print('ネットに繋がってないよ');
     }
   });
 }

@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:frontend/ranking.dart';
+
+import 'chart.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MyRankingApp());
+  //runApp(MyChatrApp());
+  //print("yo");
 }
 
 class MyApp extends StatelessWidget {
